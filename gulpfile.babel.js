@@ -6,7 +6,6 @@ import hb from 'gulp-hb';
 import sass from 'gulp-sass';
 import sourcemaps from 'gulp-sourcemaps';
 import uglify from 'gulp-uglify';
-import transpile from 'gulp-es6-module-transpiler';
 import rename from 'gulp-rename';
 import notify from 'gulp-notify';
 import cleanCSS from 'gulp-clean-css';
@@ -44,16 +43,6 @@ gulp.task('scripts', () => {
     /* Reload the browser CSS after every change */
     .pipe(reload({stream:true}));
 });
-
-// gulp.task('js', function() {
-//   return gulp.src('./src/js/**/*.js')
-//     .pipe(sourcemaps.init())
-//     .pipe(transpile({
-//       formatter: 'bundle'
-//     }))
-//     .pipe(sourcemaps.write('./'))
-//     .pipe(gulp.dest('./dist/js'));
-//  });
 
 /* Sass task */
 gulp.task('sass', () => {  

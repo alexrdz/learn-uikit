@@ -4,7 +4,7 @@
   "description": "uikit template",
   "main": "index.js",
   "scripts": {
-    "setup": "mv node_modules/uikit/src/scss/ src/ && mv node_modules/uikit/src/js/ src/ && mv node_modules/uikit/src/images/ src/"
+    "setup": "mv node_modules/uikit/src/scss/ src/ && mv node_modules/uikit/src/js/ src/ && mv node_modules/uikit/src/images/ src/ && mv node_modules/uikit/dist/js dist/"
   },
   "author": "alexrdz",
   "license": "MIT",
@@ -15,7 +15,6 @@
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.0.4",
     "gulp-concat": "^2.6.1",
-    "gulp-es6-module-transpiler": "^0.2.2",
     "gulp-hb": "^6.0.2",
     "gulp-minify-css": "^1.2.4",
     "gulp-notify": "^3.0.0",
