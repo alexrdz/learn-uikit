@@ -29,24 +29,24 @@ gulp.task('hbs', () => {
     .pipe(reload({stream:true}));
 });
 
-gulp.task('scripts', () => {
-  return gulp.src([
-    /* Add your JS files here, they will be combined in this order */
-    // 'js/vendor/jquery-1.11.1.js',
-    './src/js/slides.min.js',
-    './src/js/custom.js'
-  ])
-    .pipe(concat('main.js'))
-    .pipe(rename({suffix: '.min'}))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
-    /* Reload the browser CSS after every change */
-    .pipe(reload({stream:true}));
-});
+// gulp.task('scripts', () => {
+//   return gulp.src([
+//     /* Add your JS files here, they will be combined in this order */
+//     // 'js/vendor/jquery-1.11.1.js',
+//     './src/js/slides.min.js',
+//     './src/js/custom.js'
+//   ])
+//     .pipe(concat('main.js'))
+//     .pipe(rename({suffix: '.min'}))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('./dist/js'))
+//     /* Reload the browser CSS after every change */
+//     .pipe(reload({stream:true}));
+// });
 
 /* Sass task */
 gulp.task('sass', () => {  
-  gulp.src('./src/scss/uikit.scss')
+  gulp.src('./src/scss/custom.scss')
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass().on('error', sass.logError))
@@ -59,9 +59,9 @@ gulp.task('sass', () => {
 });
 
 gulp.task('assets', () => {
-  gulp.src('./src/assets/**/*')
+  gulp.src('./src/images/**/*')
     .pipe(plumber())
-    .pipe(gulp.dest('./dist/assets'))
+    .pipe(gulp.dest('./dist/images'))
     /* Reload the browser CSS after every change */
     .pipe(reload({stream:true}));
 });
@@ -99,6 +99,8 @@ gulp.task('serve', () => {
 gulp.task('watch', () => {
   /* Watch scss, run the sass task on change. */
   gulp.watch(['./src/scss/*.scss', './src/scss/**/*.scss'], ['sass'])
+  /* Watch images, run the assets task on change. */
+  gulp.watch(['./src/images/**/*', './src/images/**/*'], ['assets'])
   /* Watch app.js file, run the scripts task on change. */
   // gulp.watch(['./src/js/custom.js'], ['scripts'])
   /* Watch .html files, run the bs-reload task on change. */

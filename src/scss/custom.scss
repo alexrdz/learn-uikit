@@ -1,0 +1,19 @@
+
+@mixin hook-card() { 
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+@mixin hook-card-default() { 
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+@mixin hook-navbar-container() {
+  background-color: $global-primary-background;
+}
+
+$global-primary-background: #deaa24 !default;
+$global-link-color: #4321ad !default;
+
+@import 'uikit.scss';
