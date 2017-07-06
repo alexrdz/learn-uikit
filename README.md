@@ -4,7 +4,7 @@ Begin
 
 `$ git clone https://github.com/alexrdz/learn-uikit`
 
-Then
+Then 
 
 `$ npm run setup`
 
