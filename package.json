@@ -4,7 +4,8 @@
   "description": "uikit template",
   "main": "index.js",
   "scripts": {
-    "setup": "mv node_modules/uikit/src/scss/ src/ && mv node_modules/uikit/src/js/ src/ && mv node_modules/uikit/src/images/ src/ && mv node_modules/uikit/dist/js dist/"
+    "setup": "mv node_modules/uikit/src/scss/ src/ && mv node_modules/uikit/src/js/ src/ && mv node_modules/uikit/src/images/ src/ && mv node_modules/uikit/dist/js dist/",
+    "js": "mv node_modules/uikit/dist/js dist/"
   },
   "author": "alexrdz",
   "license": "MIT",
