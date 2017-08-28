@@ -4,7 +4,7 @@
   "description": "uikit template",
   "main": "index.js",
   "scripts": {
-    "setup": "mv node_modules/uikit/src/scss/ src/ && mv node_modules/uikit/src/js/ src/ && mv node_modules/uikit/src/images/ src/ && mv node_modules/uikit/dist/js dist/"
+    "setup": "rm -rf src/scss/uikit mv node_modules/uikit/src/scss/ src/uikit && mv node_modules/uikit/src/js/ src/uikit && mv node_modules/uikit/src/images/ src/uikit && mv node_modules/uikit/dist/js dist/"
   },
   "author": "alexrdz",
   "license": "MIT",
@@ -24,6 +24,6 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^2.1.2",
     "imagemin": "^5.2.2",
-    "uikit": "^3.0.0-beta.24"
+    "uikit": "^3.0.0-beta.30"
   }
 }
